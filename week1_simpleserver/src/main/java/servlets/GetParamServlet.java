@@ -16,7 +16,7 @@ public class GetParamServlet extends HttpServlet {
                 request.getParameterMap();
         Iterator<String> it = params.keySet().iterator();
         if (it.hasNext()) {
-            response.getWriter().println(Arrays.toString(params.get(it.next())));
+            response.getWriter().println(params.get(it.next())[0]);
         }
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
